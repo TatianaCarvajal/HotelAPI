@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.TatianaCarvajal</groupId>
-	<artifactId>HotelAPI</artifactId>
+	<artifactId>hotel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>HotelAPI</name>
 	<description>Demo project for Spring Boot</description>
