@@ -16,6 +16,6 @@ public class Reservation {
 
     private String checkInDate;
     private String checkOutDate;
-    private String cost;
-    private double paymentMethod;
+    private Double cost;
+    private String paymentMethod;
 }
