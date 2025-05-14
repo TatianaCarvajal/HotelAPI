@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class GuestService {
@@ -16,6 +17,11 @@ public class GuestService {
     //Show guest
     public List<Guest> getAllGuest() {
       return guestRepository.findAll();
+    }
+    
+    //Show guest by Id
+    public Optional<Guest> getGuestById(Long id) {
+        return guestRepository.findById(id);
     }
 
     //Create guest
