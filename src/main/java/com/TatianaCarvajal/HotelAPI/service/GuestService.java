@@ -19,7 +19,7 @@ public class GuestService {
       return guestRepository.findAll();
     }
     
-    //Show guest by Id
+    //Show guest by id
     public Optional<Guest> getGuestById(Long id) {
         return guestRepository.findById(id);
     }

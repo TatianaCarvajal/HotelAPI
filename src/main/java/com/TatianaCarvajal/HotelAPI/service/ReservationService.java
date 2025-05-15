@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ReservationService {
@@ -14,22 +15,27 @@ public class ReservationService {
     private ReservationRepository reservationRepository;
 
     //Show reservation
-    private List<Reservation> getAllReservation() {
+    public List<Reservation> getAllReservation() {
         return reservationRepository.findAll();
     }
 
+    //Show reservation by id
+    public Optional<Reservation> getReservationById(Long id) {
+        return reservationRepository.findById(id);
+    }
+
     //Create reservation
-    private Reservation createReservation(Reservation reservation) {
+    public Reservation createReservation(Reservation reservation) {
         return reservationRepository.save(reservation);
     }
 
     //Update reservation
-    private Reservation updateReservation(Reservation reservation) {
+    public Reservation updateReservation(Reservation reservation) {
         return reservationRepository.save(reservation);
     }
 
     //Delete reservation
-    private void deleteReservation(Long id) {
+    public void deleteReservation(Long id) {
         reservationRepository.deleteById(id);
     }
 }
